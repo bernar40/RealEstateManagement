@@ -85,6 +85,18 @@ To get your RealEstateManagement application up and running, follow these simple
 
 RealEstateManagement uses SQLite3 as its database, and the database file is already included in the repository. There's no need to set up a separate database server.
 
+## Development Database IDs for Agent
+
+In the development database, you can use the following IDs for agents when testing or interacting with the application:
+
+| Agent ID | First Name | Last Name | Email                |
+|----------|------------|-----------|----------------------|
+| 8        | Agent1     | Smith     | agent1@example.com   |
+| 9        | Agent2     | Johnson   | agent2@example.com   |
+| 10       | Agent3     | Williams  | agent3@example.com   |
+
+These agents are pre-populated in the development database to facilitate testing and interactions with the application during development.
+
 ## Test Coverage
 
 Our application boasts comprehensive testing, ensuring 100% code coverage. For a deeper understanding, you can check the `coverage/index.html` folder, generated using the SimpleCov gem.
