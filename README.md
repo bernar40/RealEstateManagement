@@ -1,24 +1,94 @@
-# README
+# RealEstateManagement
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Ruby Version](https://img.shields.io/badge/Ruby-3.2.2-brightgreen.svg)](https://www.ruby-lang.org)
+[![Rails Version](https://img.shields.io/badge/Rails-7.1.1-brightgreen.svg)](https://rubyonrails.org)
 
-Things you may want to cover:
+**RealEstateManagement** is a robust Ruby on Rails application tailored for efficient real estate property management. It offers a comprehensive, RESTful API for seamless property administration. This project is Docker-ready, fully tested, and boasts 100% test coverage. Additionally, it leverages Swagger for effortless API documentation.
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+To get your RealEstateManagement application up and running, follow these simple steps. You have two options: using Docker or running it directly without Docker.
 
-* Configuration
+### Using Docker
 
-* Database creation
+1. Clone this repository:
 
-* Database initialization
+   ```bash
+   git clone https://github.com/bernar40/RealEstateManagement.git
+   ```
 
-* How to run the test suite
+2. Navigate to the project directory:
 
-* Services (job queues, cache servers, search engines, etc.)
+   ```bash
+   cd RealEstateManagement
+   ```
 
-* Deployment instructions
+3. Build the Docker containers:
 
-* ...
+   ```bash
+   docker-compose build
+   ```
+
+4. Run the Docker containers:
+
+   ```bash
+   docker-compose up
+   ```
+
+5. Access the application at [http://localhost:3000](http://localhost:3000).
+
+6. Explore the Swagger documentation at [http://localhost:3000/api-docs/index.html](http://localhost:3000/api-docs/index.html).
+
+7. For those looking to deploy the production environment, ensure you run the database seed task:
+
+   ```bash
+   docker-compose run web bin/rails db:seed
+   ```
+
+### Running Without Docker
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/bernar40/RealEstateManagement.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd RealEstateManagement
+   ```
+
+3. Install the required gems:
+
+   ```bash
+   bundle install
+   ```
+
+4. You don't need to set up the database separately if you're using the pre-existing one in the repository. However, if needed, you can set up your own:
+
+   ```bash
+   bin/rails db:setup
+   ```
+
+5. Start the Rails server:
+
+   ```bash
+   bin/rails s
+   ```
+
+6. Access the application at [http://localhost:3000](http://localhost:3000).
+
+7. Explore the Swagger documentation at [http://localhost:3000/api-docs/index.html](http://localhost:3000/api-docs/index.html).
+
+## Database
+
+RealEstateManagement uses SQLite3 as its database, and the database file is already included in the repository. There's no need to set up a separate database server.
+
+## Test Coverage
+
+Our application boasts comprehensive testing, ensuring 100% code coverage. For a deeper understanding, you can check the `coverage/index.html` folder, generated using the SimpleCov gem.
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
