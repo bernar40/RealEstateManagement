@@ -24,10 +24,5 @@ jobs:
     - name: Install dependencies
       run: bundle install
 
-    - name: Set up database
-      run: |
-        bundle exec rake db:schema:load
-        bundle exec rake db:test:prepare
-
     - name: Run tests
       run: bundle exec rspec
